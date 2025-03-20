@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  ransomware-detection:
+    build: .
+    container_name: ransomware_detector
+    volumes:
+      - ./scripts:/app/scripts
+      - ./machine_learning:/app/machine_learning
+    restart: always
