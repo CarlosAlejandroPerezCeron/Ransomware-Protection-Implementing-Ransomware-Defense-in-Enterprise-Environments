@@ -1,0 +1,13 @@
+rule:
+  title: "Ransomware Activity Detected"
+  logsource:
+    category: file_event
+    product: windows
+  detection:
+    keywords:
+      - ".locked"
+      - ".encrypted"
+      - "ransom_note.txt"
+    condition: keywords
+  level: high
+  description: "Detecta actividad sospechosa de ransomware en archivos."
