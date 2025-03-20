@@ -1,0 +1,6 @@
+correlation_rules:
+  - name: "Possible Ransomware Attack"
+    conditions:
+      - "rule:Ransomware Activity Detected"
+      - "process_name: suspicious_encryptor.exe"
+    action: "Trigger alert and isolate machine"
